@@ -1,3 +1,56 @@
+.div-back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(54, 57, 63);
+}
+
+.div-back > form {
+    width: 85%
+}
+
+.div-text {
+    margin-top: 9px;
+    font-size: 7px;
+    margin-bottom : 3px;
+    color : rgb(172,174,177);
+}
+
+.div-title {
+    color : rgb(172,174,177);
+}
+
+.div-change {
+    margin-top: 6px;
+    margin-bottom: 30px;
+    font-size: 12px;
+    color : rgb(117, 129, 211);
+}
+
+.top {
+    margin-top : 25px;
+}
+
+.button-color {
+    border : 0;
+    background-color : rgb(117, 129, 211);
+    color : rgb(244,256,252);
+}
+
+.input-color {
+    background-color: rgb(48,51,57);
+    border-color: rgb(34,36,40);
+}
+
+.null {
+    margin-top : 16px;
+}
+
+.margin {
+    width: 30px;
+    height: 200px;
+}
+
 .sign-container {
     display: flex;
     flex-direction: column;
@@ -11,18 +64,4 @@
 
 form input:focus {
     outline: none;
-}
-
-.sign-header {
-    display: flex;
-}
-
-.sign-header > div {
-    text-align: center;
-    width: 50%;
-    background-color: rgb(43, 163, 255);
-}
-
-.sign-header > div:last-child {
-    background-color: rgb(38, 123, 188);
 }
