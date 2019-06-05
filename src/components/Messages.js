@@ -14,7 +14,8 @@ class Messages extends React.Component {
     for (var i = 0; i < pMsg.length; i++) {
       console.log(pMsg[i]);
       messages.push(<Message key={i} data={pMsg[i]}
-        sep={(i==0 || pMsg[i-1].alert || pMsg[i].user_id !== pMsg[i-1].user_id) ? true:false} />);
+        sep={(i===0 || pMsg[i-1].alert || pMsg[i].user_id !== pMsg[i-1].user_id) ? true:false}
+        vtime={!pMsg[i].alert && (i===pMsg.length-1 || pMsg[i].time !== pMsg[i+1].time || pMsg[i].user_id !== pMsg[i+1].user_id) ? true:false} />);
     }
 
     return (

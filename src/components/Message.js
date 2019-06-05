@@ -23,7 +23,7 @@ class Message extends React.Component {
           </div>
           <div className="message-body">
             <div className="message-content">{this.props.data.content}</div>
-            <div className="message-date">{this.props.data.time}</div>
+            <div className="message-date">{this.props.vtime?this.props.data.time:''}</div>
           </div>
         </div>
       )
@@ -32,7 +32,7 @@ class Message extends React.Component {
         <div className="message">
           <div className="message-body">
             <div className="message-content">{this.props.data.content}</div>
-            <div className="message-date">{this.props.data.time}</div>
+            <div className="message-date">{this.props.vtime?this.props.data.time:''}</div>
           </div>
         </div>
       )
