@@ -1,0 +1,28 @@
+.sign-container {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.sign-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input:focus {
+    outline: none;
+}
+
+.sign-header {
+    display: flex;
+}
+
+.sign-header > div {
+    text-align: center;
+    width: 50%;
+    background-color: rgb(43, 163, 255);
+}
+
+.sign-header > div:last-child {
+    background-color: rgb(38, 123, 188);
+}

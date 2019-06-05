@@ -9,11 +9,13 @@ class Messages extends React.Component {
 
   render() {
     // Loop through all the messages in the state and create a Message component
-    const messages = this.props.msg.map((message, i) => {
-      return (
-        <Message key={i} data={message} user_id={this.props.user_id} />
-      )
-    });
+    const messages = []
+    const pMsg = this.props.msg;
+    for (var i = 0; i < pMsg.length; i++) {
+      console.log(pMsg[i]);
+      messages.push(<Message key={i} data={pMsg[i]}
+        sep={(i==0 || pMsg[i-1].alert || pMsg[i].user_id !== pMsg[i-1].user_id) ? true:false} />);
+    }
 
     return (
       <div className='chat-body' id='messageList'>

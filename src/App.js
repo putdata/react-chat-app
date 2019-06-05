@@ -26,7 +26,12 @@ class App extends Component {
     }
     return (
       <BrowserRouter>
-        <Chat userID={ this.state.userID } />
+        <div className="space-container">
+          <div className="aside-container">
+
+          </div>
+          <Chat userID={ this.state.userID } />
+        </div>
       </BrowserRouter>
     );
   }

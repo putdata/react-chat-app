@@ -96,7 +96,7 @@ class LoginPanel extends Component {
 
     return (
       <div className="sign-container">
-        <div>
+        <div className="sign-header">
           <div onClick={ this.viewSignIn }>SIGN IN</div>
           <div onClick={ this.viewSignUp }>SIGN UP</div>
         </div>

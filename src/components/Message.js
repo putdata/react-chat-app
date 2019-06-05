@@ -14,18 +14,26 @@ class Message extends React.Component {
           {this.props.data.newUser ? enter : out}
         </div>
       )
-    }
-    else if(this.props.user_id === this.props.data.user_id) {
+    } else if(this.props.sep) {
       return (
-        <div className="message me">
-          <div className="message-body">{this.props.data.content}</div>
+        <div className="message">
+          <div className="message-from">
+            <div className="message-usericon"></div>
+            <div className="message-username">{this.props.data.user_id}</div>
+          </div>
+          <div className="message-body">
+            <div className="message-content">{this.props.data.content}</div>
+            <div className="message-date">{this.props.data.time}</div>
+          </div>
         </div>
       )
     } else {
       return (
         <div className="message">
-          <div>{this.props.data.user_id}</div>
-          <div className="message-body">{this.props.data.content}</div>
+          <div className="message-body">
+            <div className="message-content">{this.props.data.content}</div>
+            <div className="message-date">{this.props.data.time}</div>
+          </div>
         </div>
       )
     }
