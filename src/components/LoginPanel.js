@@ -75,15 +75,16 @@ class LoginPanel extends Component {
   render() {
     const SIGNIN = (
       <div className="div-back">
-        <div className="top"> </div>
-        <div className="div-title">
-          Welcome CUBE CHAT!
-        </div>
+        <div className="div-title">Welcome to CUBE CHAT!</div>
         <form onSubmit={ this.onSignIn }>
+        <div className="input-field">
           <div className="div-text">ID</div>
-          <input className="input-color" type="text" name="reqID" value={ this.state.reqID } onChange={ this.onChange } required autoFocus/>
-          <div className="div-text">PASSWORD</div>
-          <input className="input-color" type="password" name="reqPW" value={ this.state.reqPW } onChange={ this.onChange } required/>
+            <input className="input-color" type="text" name="reqID" value={ this.state.reqID } onChange={ this.onChange } autoComplete="off" required autoFocus/>
+          </div>
+          <div className="input-field">
+            <div className="div-text">PASSWORD</div>
+            <input className="input-color" type="password" name="reqPW" value={ this.state.reqPW } onChange={ this.onChange } required/>
+          </div>
           <button className="button-color" type="submit">Login</button>
           <div className="div-change" onClick={this.viewSignUp}>Create your account</div>
         </form>
@@ -92,17 +93,20 @@ class LoginPanel extends Component {
 
     const SIGNUP = (
       <div className="div-back">
-        <div className="top"> </div>
-        <div className="div-title">
-          Create an account
-        </div>
+        <div className="div-title">Create an account</div>
         <form onSubmit={ this.onSignUp }>
-          <div className="div-text">ID</div>
-          <input className="input-color" type="text" name="reqID" value={ this.state.reqID } onChange={ this.onChange } required autoFocus/>
-          <div className="div-text">PASSWORD</div>
-          <input className="input-color" type="password" name="reqPW" value={ this.state.reqPW } onChange={ this.onChange } required/>
-          <div className="div-text">CHECK PASSWORD</div>
-          <input className="input-color" type="password" name="reqRePW" value={ this.state.reqRePW } onChange={ this.onChange } required/>
+          <div className="input-field">
+            <div className="div-text">ID</div>
+            <input className="input-color" type="text" name="reqID" value={ this.state.reqID } onChange={ this.onChange } autoComplete="off" required autoFocus/>
+          </div>
+          <div className="input-field">
+            <div className="div-text">PASSWORD</div>
+            <input className="input-color" type="password" name="reqPW" value={ this.state.reqPW } onChange={ this.onChange } required/>
+          </div>
+          <div className="input-field">
+            <div className="div-text">REPEAT PASSWORD</div>
+            <input className="input-color" type="password" name="reqRePW" value={ this.state.reqRePW } onChange={ this.onChange } required/>
+          </div>
           <button className="button-color" type="submit">Continue</button>
           <div className="div-change" onClick={this.viewSignIn}>Already have an account?</div>
         </form>
